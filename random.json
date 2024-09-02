@@ -1,0 +1,38 @@
+{
+  "_id": "66c5d9a4957867fd8f768246",
+  "title": "Apple iPhone 15 (128 GB) - Black",
+  "description": "iPhone 15 features a durable color-infused glass and aluminum design. It’s splash, water, and dust resistant. The Ceramic Shield front is tougher than any smartphone glass. And the 6.1 Super Retina XDR display is up to 2x brighter in the sun compared to iPhone 14",
+  "price": 71290,
+  "productImages": [
+    {
+      "public_id": "Amazon/Amazon_Product_Image/eiivj56gibna6046pgmw",
+      "url": "https://res.cloudinary.com/dbhxlg7wx/image/upload/v1724242339/Amazon/Amazon_Product_Image/eiivj56gibna6046pgmw.webp",
+      "_id": "66c5d9a4957867fd8f768247"
+    },
+    {
+      "public_id": "Amazon/Amazon_Product_Image/z61gbprbuzovhps7y3q2",
+      "url": "https://res.cloudinary.com/dbhxlg7wx/image/upload/v1724242340/Amazon/Amazon_Product_Image/z61gbprbuzovhps7y3q2.jpg",
+      "_id": "66c5d9a4957867fd8f768248"
+    },
+    {
+      "public_id": "Amazon/Amazon_Product_Image/wcnfxt6owvs84moc0mad",
+      "url": "https://res.cloudinary.com/dbhxlg7wx/image/upload/v1724242339/Amazon/Amazon_Product_Image/wcnfxt6owvs84moc0mad.webp",
+      "_id": "66c5d9a4957867fd8f768249"
+    },
+    {
+      "public_id": "Amazon/Amazon_Product_Image/qyglzks62udiklm1dn0k",
+      "url": "https://res.cloudinary.com/dbhxlg7wx/image/upload/v1724242339/Amazon/Amazon_Product_Image/qyglzks62udiklm1dn0k.webp",
+      "_id": "66c5d9a4957867fd8f76824a"
+    }
+  ],
+  "seller": "659a51451b67c886efd46d98",
+  "deliveryCharges": 250,
+  "in_Stock": 6,
+  "feedback": [],
+  "activeOrders": [],
+  "fulfilledOrders": [],
+  "createdAt": "2024-08-21T12:12:20.663Z",
+  "updatedAt": "2024-08-21T12:12:20.663Z",
+  "__v": 0,
+  "category": "Mobile"
+}

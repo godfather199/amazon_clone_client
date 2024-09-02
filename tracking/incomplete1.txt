@@ -1,0 +1,2 @@
+**useFetchSellerProducts.tsx
+  1- This '/api/product/seller-products' should take "sellerId" as parameter

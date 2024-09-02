@@ -1,0 +1,12 @@
+ => => Create a FeaturedProducts component which displays couple of random products.
+
+
+      ## (Done) => Create a hook for fetching products 
+      ## (Done) => Crete ui for the products
+
+
+
+(Done) => 
+
+
+
