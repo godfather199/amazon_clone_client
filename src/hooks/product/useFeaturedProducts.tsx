@@ -23,9 +23,29 @@ export const useFeaturedProducts = () => {
     const { data: featured_Products, isLoading } = useQuery({
       queryKey: ["featuredProducts"],
       queryFn: getSellerProductsRequest,
-      enabled: isQueryEnabled,
-      staleTime: Infinity,
+      // enabled: isQueryEnabled,
+      // staleTime: Infinity,
     });
+
+    
 
     return { featured_Products, isLoading };
 };
+
+
+
+// this is the setup => const queryClient = new QueryClient({
+//   defaultOptions: {
+//     queries: {
+//       gcTime:  1000 * 60 * 60 * 24,
+//       retry: false,
+//       refetchOnWindowFocus: false,
+//       staleTime: 1000 * 60 * 60 * 24, 
+//     },
+//   },
+// }) => but on doing this =>   const { data: featured_Products, isLoading } = useQuery({
+//   queryKey: ["featuredProducts"],
+//   queryFn: getSellerProductsRequest,
+//   enabled: isQueryEnabled,
+//   staleTime: Infinity,
+// }); => not returning fresh data

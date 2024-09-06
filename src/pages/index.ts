@@ -9,6 +9,12 @@ export {default as AddNewProduct} from './seller-dashboard/seller-products/new-p
 // export {default as } from '.'
 
 
+// Auth
+export {default as LoginPage} from './auth/login/LoginPage'
+export {default as SignupPage} from './auth/signup/SignupPage'
+// export {default as } from '.'
+
+
 
 // Cart
 export {default as CartModal} from './cart/cart-modal/CartModal'
@@ -41,8 +47,13 @@ export {default as OrderItem} from './order/OrderItem'
 
 
 // Products Page
-export {default as Filter} from './products-page/filters/Filter'
 export {default as ProductsPage} from './products-page/ProductsPage'
+export {default as CategoryFilter} from './products-page/filters/category/CategoryFilter'
+export {default as PriceFilter} from './products-page/filters/price/PriceFilter'
+export {default as RatingFilter} from './products-page/filters/rating/RatingFilter'
+export {default as RatingStars} from './products-page/filters/rating/RatingStars'
+// export {default as } from '.'
+
 
 
 // Profile

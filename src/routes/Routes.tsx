@@ -7,6 +7,7 @@ import {
   Cart,
   SellerProducts,
   SellerOrders,
+  LoginPage
 } from "../pages";
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
@@ -20,6 +21,10 @@ function Routes() {
             {
                 path: "/",
                 element: <Home />
+            },
+            {
+                path: "/login",
+                element: <LoginPage />
             },
             {
                 path: "/product/:productId",

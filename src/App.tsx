@@ -1,7 +1,7 @@
 import axios from "axios"
-import { Toaster } from "./components/ui/toast/toaster"
 import Routes from "./routes/Routes"
 import { useCheckCartStatus } from "./hooks/cart/useCheckCartStatus"
+import { Toaster } from "react-hot-toast"
 
 
 export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL

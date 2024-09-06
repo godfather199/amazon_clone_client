@@ -13,29 +13,6 @@ type ProductsType = {
 
 
 function Products({isLoading, products}: ProductsType) {
-  const {pathname} = useLocation()
-
-  const [productsLoading, setProductsLoading] = useState(false)
-  const [displayProducts, setDisplayProducts] = useState<ProductType[]>([])
-
-  const {isLoading: featuredProductLoading, featured_Products} = useFeaturedProducts(pathname)
-
-  const {isLoading: sellerProductLoading, seller_Products} = useFetchSellerProducts(pathname)
-
-
-
-  // Display products and loading indicator with refrence to pathname
-  useEffect(() => {
-    if(featuredProductLoading ) setProductsLoading(featuredProductLoading)
-
-    if(sellerProductLoading) setProductsLoading(sellerProductLoading)
-      
-    if(featured_Products) setDisplayProducts(featured_Products)
-
-    if(seller_Products) setDisplayProducts(seller_Products)
-  }, [featuredProductLoading, featured_Products, sellerProductLoading, seller_Products])
-
-
 
   return (
     <div className="">

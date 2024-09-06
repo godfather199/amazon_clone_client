@@ -1,4 +1,4 @@
-export const navigation_List = [
+export const logged_In_Navigation_List = [
     {
         title: "Your Account",
         link: "some-link"
@@ -14,5 +14,18 @@ export const navigation_List = [
     {
         title: "Seller Dashboard",
         link: "seller-home"
+    },
+]
+
+
+
+export const logged_Out_Navigation_List = [
+    {
+        title: "Login",
+        link: "/login"
+    },
+    {
+        title: "Register",
+        link: "some-link"
     },
 ]

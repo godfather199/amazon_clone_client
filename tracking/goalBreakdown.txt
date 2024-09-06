@@ -1,12 +1,9 @@
- => => Create a FeaturedProducts component which displays couple of random products.
+"Mobile" => iphone + one-plus, samsung
 
+"Men's Fashion" => techno men's fit, lymio track pant + puma jacket
 
-      ## (Done) => Create a hook for fetching products 
-      ## (Done) => Crete ui for the products
+"Women's Fashion" => + van husen shirt, salvar
 
+"Books" => Oliver Twist, Harry potter + mark twain
 
-
-(Done) => 
-
-
-
+"Electronics => Samsung tv + sony

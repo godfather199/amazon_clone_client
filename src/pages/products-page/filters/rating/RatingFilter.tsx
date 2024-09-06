@@ -1,0 +1,31 @@
+import {RatingStars} from '@/pages'
+
+
+function RatingFilter() {
+  return (
+    <div className="flex flex-col gap-3">
+      {/* Heading */}
+      <div className="">
+        <small className="text-sm font-medium leading-none">
+          Filter products by rating
+        </small>
+      </div>
+
+      {/* Filter */}
+      <div className="flex flex-col gap-3">
+        {[4, 3, 2, 1].map((value) => (
+          <RatingStars
+            key={value}
+            filledCount={value}
+            emptyCount={1 + (4 - value)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default RatingFilter
+
+
+

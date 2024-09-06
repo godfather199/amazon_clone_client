@@ -7,8 +7,9 @@ import { Button } from '../../ui/button';
 import { useAddNewProduct } from '../../../hooks/product/useAddNewProduct';
 import { useEffect } from 'react';
 import { useToast } from '../../ui/toast/use-toast';
-import { AxiosError } from 'axios';
+import { AxiosError, isAxiosError } from 'axios';
 import { Spinner } from '../../ui/spinner';
+import toast from 'react-hot-toast';
 
 
 
@@ -64,7 +65,6 @@ function NewProductForm({setOpen}: NewProductFormType) {
   const { createNewproduct, isSuccess, isPending, isError, error, data } =
     useAddNewProduct();
   
-  const {toast} = useToast()
 
   const form = useForm<ProductFormType>({
     resolver: zodResolver(productFormSchema),
@@ -84,7 +84,10 @@ function NewProductForm({setOpen}: NewProductFormType) {
     if(isSuccess) {
       form.reset()
 
-      toast({ description: data.msg});
+      toast.success(data.msg, {
+        duration: 1500,
+        position: 'bottom-center'
+      });
 
       const wait = () => new Promise((resolve) => setTimeout(resolve, 800))
       
@@ -96,10 +99,12 @@ function NewProductForm({setOpen}: NewProductFormType) {
 
   // Display error
   useEffect(() => {
-    if (isError) {
-      const error2 = error as AxiosError;
+    if (isError && isAxiosError(error)) {
 
-      toast({ description: error2.response?.data.message });
+      toast.error(error.response?.data.message, {
+        duration: 1500,
+        position: 'bottom-center'
+      });
 
       const wait = () => new Promise((resolve) => setTimeout(resolve, 800))
       

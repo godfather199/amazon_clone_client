@@ -1,25 +1,41 @@
-import { Link } from "react-router-dom";
-import { navigation_List } from "../../../utils/navigationList";
+import { Link, useNavigate,  } from "react-router-dom";
+import {logged_Out_Navigation_List, logged_In_Navigation_List } from "../../../utils/navigationList";
 import { Avatar, AvatarImage } from "../../ui/avatar";
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "../../ui/navigation-menu";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { Button } from "@/components/ui/button";
 
 
 
 
 function Profile() {
+  const navigate = useNavigate()
+  const queryClient = useQueryClient()
+
+  const {data: logged_In_User} = useQuery({queryKey: ["logged_In_User_State"]})
+  // console.log("Profile: ", logged_In_User)
+
+  const handle_Logout = () => {
+    queryClient.removeQueries({
+      queryKey: ["logged_In_User_State"],
+      exact: true,
+    });
+
+    navigate("/")
+  }
+
   return (
-    <NavigationMenu >
-      <NavigationMenuList >
+    <NavigationMenu>
+      <NavigationMenuList>
         <NavigationMenuItem
-          // style={{ border: "3px solid red" }}
-          // className=" w-[10rem]"
+        // style={{ border: "3px solid red" }}
+        // className=" w-[10rem]"
         >
           <NavigationMenuTrigger>
             <Avatar>
@@ -29,16 +45,27 @@ function Profile() {
 
           <NavigationMenuContent
             style={{ border: "3px solid red" }}
-            className="flex flex-col min-w-[10rem]"
+            className="flex flex-col min-w-[10rem] bg-white"
           >
-            {navigation_List.map((item) => (
-              <Link key={item.title} to={item.link}>
-                <NavigationMenuLink
-                >
-                  {item.title}
-                </NavigationMenuLink>
-              </Link>
-            ))}
+            {logged_In_User ? (
+              <>
+                {logged_In_Navigation_List.map((item) => (
+                  <Link key={item.title} to={item.link}>
+                    {item.title}
+                  </Link>
+                ))}
+
+                <Button size= 'sm' onClick={handle_Logout}>Logout</Button>
+              </>
+            ) : (
+              <>
+                {logged_Out_Navigation_List.map((item) => (
+                  <Link key={item.title} to={item.link}>
+                    {item.title}
+                  </Link>
+                ))}
+              </>
+            )}
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
