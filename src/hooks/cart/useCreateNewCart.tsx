@@ -9,28 +9,27 @@ export type CartPayloadType = {
 
 
 export const useCreateNewCart = () => {
+  const createNewCartRequest = async ({
+    productId,
+    quantity,
+  }: CartPayloadType) => {
+    const { data } = await axios.post(
+      `/api/cart/create?productId=${productId}&quantity=${quantity}`
+    );
 
-    const createNewCartRequest = async ({
-      productId,
-      quantity,
-    }: CartPayloadType) => {
-      const { data } = await axios.post(
-        `/api/cart/create?productId=${productId}&quantity=${quantity}`
-      );
+    return data;
+  };
 
-      return data;
-    };
+  const {
+    data,
+    mutate: create_New_Cart,
+    isPending,
+    isSuccess,
+    isError,
+    error,
+  } = useMutation({ mutationFn: createNewCartRequest });
 
-    const {
-      data,
-      mutate: create_New_Cart,
-      isPending,
-      isSuccess,
-      isError, 
-      error
-    } = useMutation({mutationFn: createNewCartRequest})
-
-    return {isPending, create_New_Cart, isSuccess, isError, error, data}
+  return { isPending, create_New_Cart, isSuccess, isError, error, data };
 }
 
 

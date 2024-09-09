@@ -22,6 +22,12 @@ export {default as Cart} from './cart/Cart'
 export {default as CartItem} from './cart/cart-item/CartItem'
 export {default as TruncatedText} from './cart/cart-item/TruncatedText'
 export {default as UpdateQuantityButton} from './cart/cart-item/UpdateQuantityButton'
+export {default as DeleteButton} from './cart/cart-item/DeleteButton'
+export {default as WhishlistButton} from './cart/cart-item/WhishlistButton'
+export {default as UpdateSelectQuantity} from './cart/cart-item/UpdateSelectQuantity'
+// export {default as } from '.'
+
+
 
 // Checkout
 export {default as Checkout} from './checkout/Checkout'
@@ -52,6 +58,7 @@ export {default as CategoryFilter} from './products-page/filters/category/Catego
 export {default as PriceFilter} from './products-page/filters/price/PriceFilter'
 export {default as RatingFilter} from './products-page/filters/rating/RatingFilter'
 export {default as RatingStars} from './products-page/filters/rating/RatingStars'
+export {default as PriceRange} from './products-page/filters/price/PriceRange'
 // export {default as } from '.'
 
 

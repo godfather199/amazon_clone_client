@@ -46,7 +46,7 @@ function ProductInfo({title, rating, price}: ProductInfoType) {
 
       {/* Price */}
       <div className="">
-        <p className="leading-7 [&:not(:first-child)]:mt-6">{`₹${price.toLocaleString(
+        <p className="leading-7 [&:not(:first-child)]:mt-6">{`₹${price?.toLocaleString(
           "en-US"
         )}`}</p>
         {/* <p className="leading-7 [&:not(:first-child)]:mt-6">{`₹${formatNumberWithCommas(

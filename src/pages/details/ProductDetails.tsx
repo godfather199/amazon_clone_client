@@ -14,7 +14,7 @@ function ProductDetails() {
     queryKey: ["logged_In_User_State"],
     staleTime: Infinity,
   });
-  console.log("Product details: ", data);
+  // console.log("Product details: ", data);
   
   const {product, isLoading} = useProductById(productId as string)
   

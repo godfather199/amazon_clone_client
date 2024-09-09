@@ -11,7 +11,7 @@ function ProductsPage() {
 
 
   const { products, isLoading } = useCategoryProducts(currentCategory);
-  console.log("Category products: ", products)
+  // console.log("Category products: ", products)
 
 
   const handle_Current_Category = (info: string) => {
@@ -21,7 +21,7 @@ function ProductsPage() {
 
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 ">
       <div className="flex flex-col gap-5">
         <Heading title="Products" />
 
@@ -32,7 +32,7 @@ function ProductsPage() {
       </div>
 
       <div className="flex gap-10">
-        <div className="">
+        <div className=" flex flex-col gap-7 ">
           <RatingFilter />
 
           <PriceFilter />

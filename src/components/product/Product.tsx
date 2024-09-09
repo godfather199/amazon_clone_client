@@ -29,7 +29,7 @@ function Product({product}: ProductInfoType) {
       {/* Product Info */}
       <CardFooter
         onClick={handle_Product_Details_Navigate}
-        className=" cursor-pointer"
+        className=" cursor-pointer" 
       >
         <ProductInfo
           title={product?.title}

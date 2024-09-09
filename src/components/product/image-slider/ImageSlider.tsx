@@ -24,7 +24,7 @@ function ImageSlider({media}: ImageType) {
           <CarouselItem  key={index}>
             <div className="p-1">
               <Card className="border-none">
-                <CardContent className="  flex aspect-square items-center justify-center p-6">
+                <CardContent className="  flex aspect-square items-center justify-center p-4">
                   <img
                     // style={{border: '3px solid green'}}
                     src= {url}

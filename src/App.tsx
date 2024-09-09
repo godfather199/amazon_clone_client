@@ -11,7 +11,7 @@ axios.defaults.withCredentials = true
 
 
 function App() {
-  const status = useCheckCartStatus()
+  // const status = useCheckCartStatus()
   
   return (
     <>
